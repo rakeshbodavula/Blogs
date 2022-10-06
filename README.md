@@ -1,3 +1,6 @@
+# Working with JSON-Server
+### run this command in a seperate terminal `npx json-server --watch ./Data/blogs.json --port 2020` after installing the dependencies
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
