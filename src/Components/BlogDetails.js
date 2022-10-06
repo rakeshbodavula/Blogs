@@ -4,11 +4,11 @@ import useFetch from "../Hooks/useFetch";
 
 const BlogDetails = () => {
     const { id } = useParams()
-    const { data, isPending, error } = useFetch('https://my-json-server.typicode.com/rakeshbodavula/BlogsProjectJSONServer/' + id)
+    const { data, isPending, error } = useFetch('http://localhost:2020/blogs/' + id)
     const history = useHistory()
 
     const deleteHandler = ()=>{
-        fetch('https://my-json-server.typicode.com/rakeshbodavula/BlogsProjectJSONServer/'+data.id,{
+        fetch('http://localhost:2020/blogs/'+data.id,{
             method : 'DELETE'
         })
         .then((res) => {

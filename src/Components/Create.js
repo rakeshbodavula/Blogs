@@ -11,7 +11,7 @@ const Create = () => {
     const submitHandler = (e) =>{
         e.preventDefault()
         const blog = {title,author,body}
-        fetch('https://my-json-server.typicode.com/rakeshbodavula/BlogsProjectJSONServer',{
+        fetch('http://localhost:2020/blogs',{
             method: 'POST',
             headers : {"Content-Type" : "application/json"},
             body : JSON.stringify(blog)

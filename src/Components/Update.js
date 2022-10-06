@@ -3,7 +3,7 @@ import { useHistory, useParams } from "react-router-dom";
 import useFetch from "../Hooks/useFetch";
 
 const Update = () => {
-    const { data } = useFetch('https://my-json-server.typicode.com/rakeshbodavula/BlogsProjectJSONServer')
+    const { data } = useFetch('http://localhost:2020/blogs')
     const { id } = useParams()
     const [title, setTitle] = useState()
     const [author, setAuthor] = useState()
@@ -13,7 +13,7 @@ const Update = () => {
     let blog = null
 
     if(data){
-        blog = data.filter(x => x.id===id)
+        blog = data.filter(x => x.id==id)
         blog = blog[0]
         // setTitle(blog.title)
         // setAuthor(blog.author)
@@ -23,7 +23,7 @@ const Update = () => {
     const submitHandler = (e) => {
         e.preventDefault()
         const blog = { title, author, body }
-        fetch('https://my-json-server.typicode.com/rakeshbodavula/BlogsProjectJSONServer/'+id, {
+        fetch('http://localhost:2020/blogs/'+id, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(blog)
