@@ -13,7 +13,7 @@ const Update = () => {
     let blog = null
 
     if(data){
-        blog = data.filter(x => x.id==id)
+        blog = data.filter(x => x.id === Number(id))
         blog = blog[0]
         // setTitle(blog.title)
         // setAuthor(blog.author)
