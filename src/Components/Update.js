@@ -35,6 +35,7 @@ const Update = () => {
 
     return (
         <div className="update">
+            {!blog && <h1>Loading.......</h1>}
             {blog &&
                 <form onSubmit={submitHandler}>
                     <label htmlFor="title">Title: </label>

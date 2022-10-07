@@ -15,9 +15,12 @@ const useFetch = (url) => {
                 return res.json()
             })
             .then(data => {
-                setIsPending(false)
-                setData(data)
-                setError(null)
+                setTimeout(()=>{
+
+                    setIsPending(false)
+                    setData(data)
+                    setError(null)
+                },250)
             })
             .catch(error => {
                 setIsPending(false)

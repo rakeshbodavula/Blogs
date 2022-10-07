@@ -30,7 +30,7 @@ const BlogDetails = () => {
 
     return (
         <div className="blog-details">
-            {isPending && <div>Loading... </div>}
+            {isPending && <h1>Loading.....</h1>}
             {error && <div>error</div>}
             {data && <article>
                 <h2>{data.title}</h2>
